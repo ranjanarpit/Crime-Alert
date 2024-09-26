@@ -15,14 +15,14 @@ It’s mission is to make crime reporting more accessible, reliable, and effecti
 5. Continuously evolve and adapt by incorporating user feedback and the latest technological advancements in crime data reporting and mapping.<br><br>
 
 Features<br>
-1. Real-time Crime Reporting: Users can report crimes or suspicious activities instantly. The system captures user input and geolocation, allowing for immediate submission to law enforcement agencies.<br>
-2. Google Maps API Integration: The application is equipped with Google Maps API for accurate geolocation tagging. Users can pinpoint exact crime locations on the map, enhancing the quality and relevance of reports.<br>
-3.Responsive User Interface: The platform is designed with a responsive front-end using HTML, CSS, and JavaScript to ensure a smooth user experience across different devices. It is optimized for mobile, tablet, and desktop users.<br>
-4. Server-Side Logic with Flask: Flask is used to handle server-side logic, ensuring the system is scalable, fast, and capable of managing high volumes of data in real time. The application’s back-end is designed for efficient data handling and processing.<br>
-5. PostgreSQL Database: Crime Alert uses PostgreSQL to manage reports and user data. The database is optimized to store, retrieve, and update crime reports efficiently, allowing for quick and reliable access to information.<br>
-6. Interactive Crime Map: Users can view a map with real-time updates of reported crimes. The map provides insights into crime hotspots and helps users navigate areas with a higher occurrence of criminal activities.<br>
-7. User Authentication: The application includes a secure authentication system to verify users before they report crimes, ensuring that the platform remains credible and free of spam.<br>
-8. Crime Statistics and Insights: Crime Alert aggregates reported data to provide users with detailed statistics and trends. This feature allows users to understand the crime landscape better and encourages safer navigation of their environment.<br><br>
+1. Real-time Crime Reporting:<br> Users can report crimes or suspicious activities instantly. The system captures user input and geolocation, allowing for immediate submission to law enforcement agencies.<br>
+2. Google Maps API Integration:<br> The application is equipped with Google Maps API for accurate geolocation tagging. Users can pinpoint exact crime locations on the map, enhancing the quality and relevance of reports.<br>
+3.Responsive User Interface:<br> The platform is designed with a responsive front-end using HTML, CSS, and JavaScript to ensure a smooth user experience across different devices. It is optimized for mobile, tablet, and desktop users.<br>
+4. Server-Side Logic with Flask:<br> Flask is used to handle server-side logic, ensuring the system is scalable, fast, and capable of managing high volumes of data in real time. The application’s back-end is designed for efficient data handling and processing.<br>
+5. PostgreSQL Database:<br> Crime Alert uses PostgreSQL to manage reports and user data. The database is optimized to store, retrieve, and update crime reports efficiently, allowing for quick and reliable access to information.<br>
+6. Interactive Crime Map:<br> Users can view a map with real-time updates of reported crimes. The map provides insights into crime hotspots and helps users navigate areas with a higher occurrence of criminal activities.<br>
+7. User Authentication:<br> The application includes a secure authentication system to verify users before they report crimes, ensuring that the platform remains credible and free of spam.<br>
+8. Crime Statistics and Insights:<br> Crime Alert aggregates reported data to provide users with detailed statistics and trends. This feature allows users to understand the crime landscape better and encourages safer navigation of their environment.<br><br>
 
 Usage<br>
 Crime Alert is designed for both ordinary citizens and law enforcement agencies. Here’s how different users can benefit:<br>
