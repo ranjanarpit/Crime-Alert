@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Reporting Portal - Report Crime</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlD1_K69kGEb03N1dC3WzmpRgcyT-EYW0&callback=initMap&Libraries=&v=weekly"defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header></header>
+        <div class="header-topbar">
+            <div class="government-info">
+                <div class="row">
+                    <span>भारत सरकार</span>
+                    <span>|</span>
+                    <span>गृह मंत्रालय</span>
+                </div>
+                <div class="row">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <span>|</span>
+                    <span>MINISTRY OF HOME AFFAIRS</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="middle-left">
+                <img src="{{ url_for('static', filename='images/ashok_stambh.jpeg') }}" alt="Ashok Stambh">
+                <img src="{{ url_for('static', filename='images/flag.jpg') }}" alt="Image 2">
+                <div class="logo-text">
+                    <p>राष्ट्रीय अपराध रिपोर्टिंग पोर्टल</p>
+                    <p>National Crime Reporting Portal</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <img src="{{ url_for('static', filename='images/azadi.jpeg') }}" alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <div class="navbar-container">
+            <a href="{{ url_for('index') }}" class="logo-container"> <!-- Link to your desired page -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <div class="logo-text">
+                    <p>National Police - SafeGuard Alert</p>
+                </div>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('citizen') }}">Citizen's Corner</a></li>
+                    <li><a href="{{ url_for('police') }}">Police Corner</a></li>
+                    <li><a href="{{ url_for('units') }}">Special Units</a></li>
+                    <li><a href="{{ url_for('track') }}">Track Your Report</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Crime and Criminal tracking System</h1>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+
+    <form action="/submit_report" method="POST">
+        <label for="incident_type">Incident Type:</label>
+        <select id="incident_type" name="incident_type" required>
+        <option value="" disabled selected>Select incident type</option>
+        <option value="violent_crimes">Violent Crimes</option>
+        <option value="property_crimes">Property Crimes</option>
+        <option value="white_collar_crimes">White-Collar Crimes</option>
+        <option value="organized_crimes">Organized Crimes</option>
+        <option value="criber_crimes">Cyber Crimes</option> 
+        <option value="drug_related_crimes">Drug-Related Crimes</option> 
+        <option value="environmental_crimes">Environmental Crimes</option> 
+        <option value="public_order_crimes">Public Order Crimes</option> 
+        <!-- Add more options as needed -->
+        </select><br>
+        <label for="description">Incident Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="location">Location (Address):</label>
+        <input type="text" id="location" name="location" placeholder="Location will be filled here" required><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="witness_name">Witness Name:</label>
+        <input type="text" id="witness_name" name="witness_name" placeholder="Optional"><br>
+
+        <label for="victim_info">Victim Information:</label>
+        <textarea id="victim_info" name="victim_info" placeholder="Name, contact info, etc." required></textarea><br>
+
+        <label for="suspect_info">Suspect Information:</label>
+        <textarea id="suspect_info" name="suspect_info" placeholder="Description of the suspect"></textarea><br>
+
+        <button type="submit">Report Crime</button>
+    </form>
+
+    <script>
+        function initMap() {
+            // Initialize the map
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: { lat: 28.7041, lng: 77.1025 }, // Default location (Delhi)
+                scrollwheel: true, // Enable scrollwheel zoom
+                gestureHandling: 'auto'
+            });
+
+            // Create a Geocoder instance
+            var geocoder = new google.maps.Geocoder();
+
+            // Event listener for map clicks
+            map.addListener('click', function(event) {
+                var lat = event.latLng.lat(); // Get latitude from the clicked location
+                var lng = event.latLng.lng(); // Get longitude from the clicked location
+
+                console.log("Map clicked at: Latitude:", lat, "Longitude:", lng);
+                
+                // Call the geocode function to get the address from the latitude and longitude
+                geocodeLatLng(geocoder, map, lat, lng);
+            });
+        }
+
+        function geocodeLatLng(geocoder, map, lat, lng) {
+            var latlng = { lat: lat, lng: lng };
+            
+            console.log("Attempting to geocode latLng:", latlng);
+            
+            // Geocode the latitude and longitude into an address
+            geocoder.geocode({ location: latlng }, function(results, status) {
+                console.log("Geocode status:", status);
+                console.log("Geocode results:", results);
+
+                if (status === 'OK') {
+                    // If results are found
+                    if (results[0]) {
+                        // Get the formatted address and fill it in the location field
+                        var address = results[0].formatted_address;
+                        document.getElementById('location').value = address;
+
+                        // Optionally display a confirmation message
+                        alert('Location: ' + address + ' has been filled into the location field.');
+                    } else {
+                        // Handle the case where no results are returned
+                        alert('No address found for this location. Please try again.');
+                    }
+                } else {
+                    // Handle the error if the geocoding request fails
+                    alert('Invalid location, try again. Geocoder status: ' + status);
+                    console.error("Geocode error details:", status);
+                }
+            });
+        }
+
+        // Load the map when the page is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            initMap();
+        });
+    </script>
+        
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Crime Alerts - Home</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="government-info">
+                <div class="row">
+                    <span>भारत सरकार</span>
+                    <span>|</span>
+                    <span>गृह मंत्रालय</span>
+                </div>
+                <div class="row">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <span>|</span>
+                    <span>MINISTRY OF HOME AFFAIRS</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="middle-left">
+                <img src="{{ url_for('static', filename='images/ashok_stambh.jpeg') }}" alt="Ashok Stambh">
+                <img src="{{ url_for('static', filename='images/flag.jpg') }}" alt="Image 2">
+                <div class="logo-text">
+                    <p>राष्ट्रीय अपराध रिपोर्टिंग पोर्टल</p>
+                    <p>National Crime Reporting Portal</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <img src="{{ url_for('static', filename='images/azadi.jpeg') }}" alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <div class="navbar-container">
+            <a href="{{ url_for('index') }}" class="logo-container"> <!-- Link to your desired page -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <div class="logo-text">
+                    <p>National Police - SafeGuard Alert</p>
+                </div>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('citizen') }}">Citizen's Corner</a></li>
+                    <li><a href="{{ url_for('police') }}">Police Corner</a></li>
+                    <li><a href="{{ url_for('units') }}">Special Units</a></li>
+                    <li><a href="{{ url_for('track') }}">Track Your Report</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container" id="contact_us"></div>
+        <div class="content-section">
+            <h2>Contact Us</h2>
+            <p>Give us your feedback so that we can Improve!</p>
+            <form id="contactForm" action="php/contact_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message" required></textarea><br><br>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

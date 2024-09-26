@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Crime Alerts - Home</title>
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="government-info">
+                <div class="row">
+                    <span>भारत सरकार</span>
+                    <span>|</span>
+                    <span>गृह मंत्रालय</span>
+                </div>
+                <div class="row">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <span>|</span>
+                    <span>MINISTRY OF HOME AFFAIRS</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="middle-left">
+                <img src="{{ url_for('static', filename='images/ashok_stambh.jpeg') }}" alt="Ashok Stambh">
+                <img src="{{ url_for('static', filename='images/flag.jpg') }}" alt="Image 2">
+                <div class="logo-text">
+                    <p>राष्ट्रीय अपराध रिपोर्टिंग पोर्टल</p>
+                    <p>National Crime Reporting Portal</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <img src="{{ url_for('static', filename='images/azadi.jpeg') }}" alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <div class="navbar-container">
+            <a href="{{ url_for('index') }}" class="logo-container"> <!-- Link to your desired page -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <div class="logo-text">
+                    <p>National Police - SafeGuard Alert</p>
+                </div>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('citizen') }}">Citizen's Corner</a></li>
+                    <li><a href="{{ url_for('police') }}">Police Corner</a></li>
+                    <li><a href="{{ url_for('units') }}">Special Units</a></li>
+                    <li><a href="{{ url_for('track') }}">Track Your Report</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+
+    <div class="container" id="special_units">
+        <div class="content-section">
+            <h2>Welcome to Special Units!</h2>
+            <p>Welcome to Special Units, where specialized teams collaborate to address unique challenges and enhance community safety. At Special Units, we bring together expertise, innovation, and strategic initiatives to tackle complex issues and safeguard our neighborhoods. Together, we strive to create a resilient and secure environment where every individual can live, work, and thrive without fear.</p>
+            
+            <h2>What You’ll Find Here</h2>
+            <p>At Special Units, we focus on delivering targeted solutions and initiatives that address specific safety concerns and enhance overall community well-being:</p>
+            <ul>
+                <li><strong>Task Forces and Initiatives:</strong> Collaborate with specialized task forces and multidisciplinary teams to address emerging security challenges, such as organized crime, cyber threats, and community-based violence. Implement targeted strategies and initiatives that mitigate risks and protect vulnerable populations.</li>
+                <li><strong>Advanced Technologies:</strong> Harness cutting-edge technologies and innovative solutions to enhance surveillance, data analytics, and response capabilities. Leverage artificial intelligence, predictive modeling, and geospatial analysis to identify trends, anticipate threats, and optimize resource allocation.</li>
+                <li><strong>Community Outreach:</strong> Engage proactively with community members and stakeholders to build trust, foster collaboration, and promote safety awareness. Empower residents with knowledge, resources, and tools to actively contribute to neighborhood security and resilience.</li>
+                <li><strong>Training and Development:</strong> Provide specialized training and professional development opportunities for team members to enhance skills, knowledge, and preparedness. Equip personnel with the expertise and capabilities to respond effectively to evolving challenges and dynamic operational environments.</li>
+                <li><strong>Strategic Partnerships:</strong> Cultivate strategic partnerships with local agencies, organizations, and businesses to leverage collective expertise and resources. Collaborate on joint initiatives, share best practices, and coordinate efforts to achieve shared goals of community safety and well-being.</li>
+            </ul>
+            
+            <h2>Your Role in Strengthening Communities</h2>
+            <p>At Special Units, we recognize the invaluable contributions of dedicated teams and specialized units in safeguarding our communities. By leveraging expertise, innovation, and collaboration, we can address complex challenges and create sustainable solutions that promote safety, resilience, and prosperity for all.</p>
+        </div>
+    </div>   
+    
+</body>
+</html>

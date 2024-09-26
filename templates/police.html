@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Crime Alerts - Home</title>
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="government-info">
+                <div class="row">
+                    <span>भारत सरकार</span>
+                    <span>|</span>
+                    <span>गृह मंत्रालय</span>
+                </div>
+                <div class="row">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <span>|</span>
+                    <span>MINISTRY OF HOME AFFAIRS</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="middle-left">
+                <img src="{{ url_for('static', filename='images/ashok_stambh.jpeg') }}" alt="Ashok Stambh">
+                <img src="{{ url_for('static', filename='images/flag.jpg') }}" alt="Image 2">
+                <div class="logo-text">
+                    <p>राष्ट्रीय अपराध रिपोर्टिंग पोर्टल</p>
+                    <p>National Crime Reporting Portal</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <img src="{{ url_for('static', filename='images/azadi.jpeg') }}" alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <div class="navbar-container">
+            <a href="{{ url_for('index') }}" class="logo-container"> <!-- Link to your desired page -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <div class="logo-text">
+                    <p>National Police - SafeGuard Alert</p>
+                </div>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('citizen') }}">Citizen's Corner</a></li>
+                    <li><a href="{{ url_for('police') }}">Police Corner</a></li>
+                    <li><a href="{{ url_for('units') }}">Special Units</a></li>
+                    <li><a href="{{ url_for('track') }}">Track Your Report</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+
+    <div class="container" id="police_corner">
+        <div class="content-section">
+            <h2>Welcome to Police Corner!</h2>
+            <p>Welcome to Police Corner, your dedicated space for law enforcement professionals committed to enhancing community safety and security. At Police Corner, we leverage advanced technology and proactive strategies to empower law enforcement agencies and strengthen their partnerships with local communities. Together, we strive to create a safer environment where every individual feels protected and supported.</p>
+            
+            <h2>What You’ll Find Here</h2>
+            <p>At Police Corner, we provide law enforcement professionals with essential tools and resources to effectively manage incidents, prioritize responses, and engage with community members:</p>
+            <ul>
+                <li><strong>Real-Time Incident Monitoring:</strong> Access real-time updates and alerts about incidents reported within your jurisdiction. Our platform ensures that you are promptly informed of critical events, enabling swift responses and proactive interventions.</li>
+                <li><strong>Data-Driven Insights:</strong> Utilize data analytics and visualization tools to gain actionable insights into crime trends, patterns, and hotspots. Empower decision-making with evidence-based information that enhances operational efficiency and resource allocation.</li>
+                <li><strong>Collaborative Communication:</strong> Foster seamless communication and collaboration with community members, fellow law enforcement agencies, and other stakeholders. Build stronger partnerships based on transparency, trust, and shared responsibility for public safety.</li>
+                <li><strong>Community Engagement:</strong> Engage directly with community members to promote safety awareness, share crime prevention strategies, and encourage proactive reporting of suspicious activities. Strengthen community bonds and empower residents to play an active role in maintaining neighborhood security.</li>
+                <li><strong>Training and Development:</strong> Access specialized training modules and professional development resources tailored to law enforcement needs. Enhance skills, knowledge, and preparedness to effectively respond to emerging challenges and evolving security threats.</li>
+            </ul>
+            
+            <h2>Your Commitment to Public Safety</h2>
+            <p>At Police Corner, we recognize the dedication and commitment of law enforcement professionals to protecting and serving our communities. Your tireless efforts, courage, and expertise are instrumental in creating a safe and secure environment for all. Together, we can build a future where every individual feels safe, supported, and empowered to thrive.</p>
+        </div>
+    </div>   
+    
+</body>
+</html>

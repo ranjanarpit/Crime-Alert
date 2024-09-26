@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Crime Alerts - Home</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="government-info">
+                <div class="row">
+                    <span>भारत सरकार</span>
+                    <span>|</span>
+                    <span>गृह मंत्रालय</span>
+                </div>
+                <div class="row">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <span>|</span>
+                    <span>MINISTRY OF HOME AFFAIRS</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="middle-left">
+                <img src="{{ url_for('static', filename='images/ashok_stambh.jpeg') }}" alt="Ashok Stambh">
+                <img src="{{ url_for('static', filename='images/flag.png') }}" alt="Image 2">
+                <div class="logo-text">
+                    <p>राष्ट्रीय अपराध रिपोर्टिंग पोर्टल</p>
+                    <p>National Crime Reporting Portal</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <img src="{{ url_for('static', filename='images/azadi.jpeg') }}" alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <div class="navbar-container">
+            <a href="{{ url_for('index') }}" class="logo-container"> <!-- Link to your desired page -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <div class="logo-text">
+                    <p>National Police - SafeGuard Alert</p>
+                </div>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('citizen') }}">Citizen's Corner</a></li>
+                    <li><a href="{{ url_for('police') }}">Police Corner</a></li>
+                    <li><a href="{{ url_for('units') }}">Special Units</a></li>
+                    <li><a href="{{ url_for('track') }}">Track Your Report</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+
+    <div class="slider"></div>
+        <div class="slides">
+            <div class="slide">
+                <a href="https://jkpolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/jammu.jpg') }}" alt="Image 1" title="Jammu Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://citizenportal.hppolice.gov.in/citizen/login.htm" target="_blank">
+                    <img src="{{ url_for('static', filename='images/himachal.png') }}" alt="Image 2" title="Himachal Pradesh Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://armedpolice.punjab.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/punjab.png') }}" alt="Image 3" title="Punjab Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://uttarakhandpolice.uk.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/uttrakhand.png') }}" alt="Image 4" title="Uttrakhand Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://haryanapolice.gov.in/login" target="_blank">
+                    <img src="{{ url_for('static', filename='images/haryana.png') }}" alt="Image 5" title="Haryana Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://delhipolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/delhi.png') }}" alt="Image 6" title="Delhi Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.rajasthan.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/rajasthan.jpg') }}" alt="Image 7" title="Rajasthan Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://uppolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/up.png') }}" alt="Image 8" title="Uttar Pradesh Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://citizen.mppolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/mp.jpeg') }}" alt="Image 9" title="Madhya Pradesh Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.gujarat.gov.in/dgp/default.aspx" target="_blank">
+                    <img src="{{ url_for('static', filename='images/gujarat.png') }}" alt="Image 10" title="Gujarat Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.mahapolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/maharashtra.jpeg') }}" alt="Image 11" title="Maharashtra Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://citizen.goapolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/goa.png') }}" alt="Image 12" title="Goa Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://ksp.karnataka.gov.in/english" target="_blank">
+                    <img src="{{ url_for('static', filename='images/karnataka.png') }}" alt="Image 13" title="Karnataka Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://keralapolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/kerala.png') }}" alt="Image 14" title="Kerala Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://eservices.tnpolice.gov.in/CCTNSNICSDC/Index?0" target="_blank">
+                    <img src="{{ url_for('static', filename='images/tamilnadu.png') }}" alt="Image 15" title="Tamil Nadu Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://citizen.appolice.gov.in/jsp/homePage.do?method=getHomePageElements" target="_blank">
+                    <img src="{{ url_for('static', filename='images/andhra.png') }}" alt="Image 17" title="Andhra Pradesh Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.tspolice.gov.in/jsp/homePage?method=getHomePageElements" target="_blank">
+                    <img src="{{ url_for('static', filename='images/telangana.png') }}" alt="Image 17" title="Telangana Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.cgpolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/chhattisgarh.png') }}" alt="Image 18" title="Chhattisgarh Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.odishapolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/odisha.png') }}" alt="Image 19" title="Odisha Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://www.jhpolice.gov.in/hi" target="_blank">
+                    <img src="{{ url_for('static', filename='images/jharkhand.png') }}" alt="Image 20" title="Jharkhand Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://wbpolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/bengal.png') }}" alt="Image 21" title="West Bengal Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.bihar.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/bihar.jpeg') }}" alt="Image 22" title="Bihar Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.sikkim.gov.in/visitors" target="_blank">
+                    <img src="{{ url_for('static', filename='images/sikkim.png') }}" alt="Image 23" title="Sikkim Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.assam.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/assam.png') }}" alt="Image 24" title="Assam Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://megpolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/meghalaya.png') }}" alt="Image 25" title="Meghalaya Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://arunpol.nic.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/arunachal.png') }}" alt="Image 26" title="Arunachal Pradesh Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.nagaland.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/nagaland.png') }}" alt="Image 27" title="Nagaland Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://manipurpolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/manipur.png') }}" alt="Image 28" title="Manipur Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://police.mizoram.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/mizoram.png') }}" alt="Image 29" title="Mizoram Police">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://tripurapolice.gov.in/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/tripura.png') }}" alt="Image 30" title="Tripura Police">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    
+</body>
+</html>

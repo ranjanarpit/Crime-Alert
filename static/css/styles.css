@@ -1,0 +1,346 @@
+/* body {
+    font-family: aptos narrow;
+    margin: 0;
+    padding: 0;
+} */
+
+header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.header-topbar {
+    display: flex;
+    justify-content: flex-start; /* Center the content horizontally */
+    padding: 5px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 14px;
+}
+
+.government-info {
+    text-align: left; /* Center align the text */
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Adjust the space between the text and the separator */
+}
+
+.row span {
+    line-height: 1.2;
+}
+
+.row span:not(:last-child) {
+    margin-right: 5px;
+}
+
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+.middle-left {
+    display: flex;
+    align-items: center;
+}
+
+.middle-left img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.logo-text p {
+    margin: 0;
+    line-height: 1.2;
+    color: #000;
+}
+
+.middle-right img {
+    height: 60px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0056b3; /* Background color for the navbar */
+}
+
+.logo-container {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+.logo {
+    max-width: 50px; /* Adjust logo size as needed */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text p {
+    margin: 0; /* Remove default margin */
+}
+
+.navbar {
+    flex-grow: 1;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background-color: #004494; /* Hover effect for the links */
+    border-radius: 4px;
+}
+
+/* Form container styling */
+form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Input fields styling */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #004494;
+}
+
+/* Slider container */
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slide 30s linear infinite; /* Continuous slide animation */
+}
+
+/* Individual slide */
+.slide {
+    flex: 0 0 5%; /* Adjust based on the number of slides */
+    box-sizing: border-box;
+}
+
+/* Slide images */
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 70px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Continuous sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move all slides fully to the left */
+    }
+}
+
+/* Pause on hover */
+.slides {
+    animation-play-state: running;
+}
+
+.slider:hover .slides {
+    animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* General container styling */
+#special_units, #about_us, #citizens_corner, #police_corner, #special_units {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Content section styling */
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content-section h2 {
+    color: #333; /* Dark text for titles */
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* Underline with primary color */
+    padding-bottom: 10px;
+}
+
+.content-section p {
+    font-size: 18px;
+    color: #333; /* Slightly lighter color for paragraph text */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Unordered list styles */
+.content-section ul {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.content-section ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.content-section ul li strong {
+    color: #007bff; /* Highlight strong text with the primary color */
+}
+
+/* Button Styling for hover effects */
+.content-section li:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for responsive design */
+@media (max-width: 768px) {
+    .content-section h2 {
+        font-size: 24px;
+    }
+    
+    .content-section p, 
+    .content-section ul li {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

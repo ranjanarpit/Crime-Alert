@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Crime Alerts - Home</title>
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="government-info">
+                <div class="row">
+                    <span>भारत सरकार</span>
+                    <span>|</span>
+                    <span>गृह मंत्रालय</span>
+                </div>
+                <div class="row">
+                    <span>GOVERNMENT OF INDIA</span>
+                    <span>|</span>
+                    <span>MINISTRY OF HOME AFFAIRS</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="middle-left">
+                <img src="{{ url_for('static', filename='images/ashok_stambh.jpeg') }}" alt="Ashok Stambh">
+                <img src="{{ url_for('static', filename='images/flag.jpg') }}" alt="Image 2">
+                <div class="logo-text">
+                    <p>राष्ट्रीय अपराध रिपोर्टिंग पोर्टल</p>
+                    <p>National Crime Reporting Portal</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <img src="{{ url_for('static', filename='images/azadi.jpeg') }}" alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <div class="navbar-container">
+            <a href="{{ url_for('index') }}" class="logo-container"> <!-- Link to your desired page -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+                <div class="logo-text">
+                    <p>National Police - SafeGuard Alert</p>
+                </div>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('citizen') }}">Citizen's Corner</a></li>
+                    <li><a href="{{ url_for('police') }}">Police Corner</a></li>
+                    <li><a href="{{ url_for('units') }}">Special Units</a></li>
+                    <li><a href="{{ url_for('track') }}">Track Your Report</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+
+    <div class="container" id="about_us">
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>At our Crime Alert Web Application, we are dedicated to leveraging cutting-edge technology to enhance the safety and security of communities worldwide. In today's interconnected world, the need for timely information and effective communication channels to prevent and respond to crime has never been more critical. Our platform serves as a pivotal tool in this effort, providing real-time updates and alerts to users, law enforcement agencies, and community organizations alike.</p>
+            
+            <h2>Vision</h2>
+            <p>Our vision is to create safer communities through the amalgamation of advanced technology and proactive community engagement. We envision a world where every individual feels secure, informed, and empowered to take decisive action against crime. By harnessing the power of data and fostering collaborative efforts within communities, we aim to significantly reduce crime rates and enhance public safety.</p>
+            
+            <h2>Mission</h2>
+            <p>The core mission of our Crime Alert Web Application is to develop and maintain a robust platform that fulfills several key objectives:</p>
+            <ul>
+                <li><strong>Provides Timely Alerts:</strong> Imagine a scenario where you are walking home late at night. Suddenly, your Crime Alert Web Application buzzes with an alert: there has been a recent mugging reported just a block away. Instantly, you are alerted to potential dangers in your vicinity, allowing you to reroute your path or take necessary precautions. Our platform ensures that such critical information reaches you in real-time, empowering you to make informed decisions about your safety.</li>
+                <li><strong>Encourages Community Engagement:</strong> One of the cornerstones of our platform is its emphasis on community engagement. We encourage users not only to stay informed but also to actively participate in maintaining the safety of their neighborhoods. Through our intuitive interface, reporting suspicious activities becomes effortless. Users can anonymously report incidents or share valuable tips with local law enforcement agencies and fellow community members. This collaborative approach strengthens the fabric of community safety, as every member plays a proactive role in crime prevention.</li>
+                <li><strong>Supports Law Enforcement:</strong> Law enforcement agencies are pivotal partners in our mission to enhance public safety. Our Crime Alert Web Application serves as a force multiplier for these agencies by providing them with accurate and real-time data analytics. This data-driven approach enables law enforcement to prioritize incidents more effectively, allocate resources efficiently, and respond to emergencies with heightened precision. By streamlining communication between the community and law enforcement, we facilitate a symbiotic relationship that amplifies the effectiveness of crime prevention efforts.</li>
+                <li><strong>Promotes Awareness and Education:</strong> Beyond immediate alerts and community engagement, our platform is committed to empowering users through education. We understand that informed individuals are better equipped to protect themselves and their communities. Therefore, we provide comprehensive resources on crime prevention strategies, safety tips tailored to various environments (e.g., home, workplace, public spaces), and proactive measures that individuals can implement in their daily lives. By promoting awareness and education, we aim to cultivate a culture of safety-consciousness that permeates through every level of society.</li>
+            </ul>
+            
+            <h2>Impact on Community Safety</h2>
+            <p>The impact of our Crime Alert Web Application transcends mere technological innovation. It resonates deeply within communities, where the ripple effects of enhanced safety and proactive engagement are palpable:</p>
+            <ul>
+                <li><strong>Reduction in Crime Rates:</strong> By enabling swift responses to incidents and facilitating timely interventions, our platform contributes to a measurable reduction in crime rates across neighborhoods.</li>
+                <li><strong>Empowerment of Individuals:</strong> Users feel empowered with the knowledge and tools to protect themselves and their loved ones. This empowerment fosters a sense of security and confidence within the community.</li>
+                <li><strong>Strengthened Community Bonds:</strong> Through collaborative efforts and shared responsibility for safety, our platform strengthens community bonds. It fosters a sense of solidarity and mutual support among residents, enhancing overall community resilience.</li>
+                <li><strong>Improved Law Enforcement Efficiency:</strong> Law enforcement agencies benefit from streamlined data management and enhanced situational awareness, leading to improved operational efficiency and resource utilization.</li>
+            </ul>
+        </div>
+    </div>    
+    
+</body>
+</html>
