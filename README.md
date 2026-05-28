@@ -1,4 +1,4 @@
-# Crime Alert - A Full-stack based Real-Time Crime Reporting Portal
+# Crime Intelligence & Incident Management System 
 Introduction<br>
 Crime Alert is a full-stack, web-based application designed to facilitate the reporting of crimes in real time. With an emphasis on accuracy and efficiency, the platform allows users to report incidents as they happen, complete with real-time geolocation tagging through the Google Maps API. It leverages Python (Flask) for server-side processing and PostgreSQL for managing data. The application was built to bridge the gap between crime occurrence and law enforcement response, ensuring that citizens have an easy and reliable way to report suspicious activities or incidents directly from their devices.<br>
 By integrating an intuitive user interface and robust backend functionality, Crime Alert provides a seamless experience that not only allows users to report incidents swiftly but also helps authorities take immediate action. The application’s interactive map enables users to visualize crime hotspots and locations, increasing community awareness and ensuring better public safety.<br><br>
